@@ -25,9 +25,9 @@ public class RymaPrjApplication {
                 User superAdmin = new User();
                 superAdmin.setEmail("superadmin@example.com");
                 superAdmin.setPassword(passwordEncoder.encode("SuperSecurePassword"));
-                Collections.singleton(Role.ROLE_SUPER_ADMIN);
 
                 superAdmin.setUsername("superadmin");
+                superAdmin.setRoles(Collections.singleton(Role.ROLE_SUPER_ADMIN));
 
                 // Correct way to assign the role:
 
